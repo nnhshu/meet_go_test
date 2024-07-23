@@ -623,7 +623,7 @@ export default function Landing() {
                             <a href="#" className="font-bold text-xl text-indigo-600 sm:mb-0 mb-5">
                                 <Image alt="" src="/img/logo.png" width={130} height={30} />
                             </a>
-                            <div className="flex-col gap-8 sm:items-start items-center flex justify-between">
+                            <div className="flex-col gap-8 sm:items-start items-start flex justify-between">
                                 <ul className="flex gap-2 sm:items-center items-start justify-end md:justify-start sm:flex-row flex-col">
                                     <li>
                                         <Link className="text-white text-sm" href="#">
