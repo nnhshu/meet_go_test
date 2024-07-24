@@ -124,9 +124,8 @@ export default function Landing() {
                 <div className="container px-4 mx-auto">
                     <div className="columns-1">
                         <div className="banner-top pt-5 w-full text-center">
-                            <h1 className="text-white mb-4 sm:w-1/2 w-full text-3xl md:text-5xl font-bold leading-normal md:leading-normal">Transforming  everyday life with the power of <strong>Web3 GeoEconomy</strong></h1>
-                            <span className="text-white mb-4 md:w-1/2 w-full">Revolutionize your daily experiences, connect with local businesses, and unlock
-                                the potential of crypto with LocaGo's innovative platform.</span>
+                            <h1 className="text-white mb-4 sm:w-1/2 w-full text-3xl md:text-5xl font-bold leading-normal md:leading-normal">The value of <strong>encounter</strong></h1>
+                            <span className="text-white mb-4 md:w-1/2 w-full">Meetgo is a face-to-face meeting platform to exchange work and life.</span>
                             <button className="py-3 px-6 rounded-full btn-main text-white hover:opacity-75">Introduction Video</button>
                             <Image alt="" className="mt-7" src="/img/img_banner.png" width={1024} height={1024} />
                         </div>
@@ -148,27 +147,27 @@ export default function Landing() {
                 </div>
                 <div className="container px-4 mx-auto flex gap-8 mt-10 sm:flex-row flex-col">
                     <div className="columns-2 flex flex-col gap-8">
-                        <div className="p-10 card-bg-item flex items-center justify-between w-full">
-                            <div className="card-item-left">
-                                <h3 className="text-white text-2xl mb-2">Innovation</h3>
-                                <p className="text-slate-400 font-light text-sm w-full sm:w-1/2">We are committed to pushing the boundaries of technology to create innovative solutions that enhance user experiences and drive economic growth.</p>
+                        <div className="p-4 sm:p-10 card-bg-item flex items-center justify-between w-full sm:flex-row flex-col-reverse">
+                            <div className="card-item-left sm:mt-0 mt-5">
+                                <h3 className="text-white text-2xl mb-2">Meetgo – Let's meet</h3>
+                                <p className="text-slate-400 font-light text-sm w-full">Meetgo is a reason for people to meet and exchange work and life directly to receive bonus points, as well as encourage users to network and create new relationships and new values.</p>
                             </div>
-                            <Image alt="" src="/img/partners/img_1.png" width={298} height={190} />
+                            <Image alt="" src="/img/program/img_1.png" width={158} height={150} />
                         </div>
-                        <div className="p-10 card-bg-item flex items-center justify-between w-full">
-                            <div className="card-item-left">
-                                <h3 className="text-white text-2xl mb-2">Community</h3>
-                                <p className="text-slate-400 font-light text-sm w-full sm:w-1/2">We prioritize building strong and vibrant communities, connecting users and businesses in meaningful ways to promote local engagement and collaboration.</p>
+                        <div className="p-4 sm:p-10 card-bg-item flex items-center justify-between w-full sm:flex-row flex-col-reverse">
+                            <div className="card-item-left sm:mt-0 mt-5">
+                                <h3 className="text-white text-2xl mb-2">MeetSME – Marketing for SME</h3>
+                                <p className="text-slate-400 font-light text-sm w-full">The solution includes software and applications for businesses, used in operations to attract customers, increase sales through a management platform as well as create new solutions to develop new customers.</p>
                             </div>
-                            <Image alt="" src="/img/partners/img_2.png" width={170} height={235} />
+                            <Image alt="" src="/img/program/SME-1.png" width={158} height={150} />
                         </div>
                     </div>
                     <div className="columns-1 gap-8">
-                        <div className="p-10 card-bg-item flex items-center justify-between mb-5 flex-row-reverse sm:flex-col">
-                            <Image alt="" src="/img/partners/img_3.png" width={300} height={281} />
-                            <div className="card-item-left">
-                                <h3 className="text-white text-2xl mb-2">Transparency</h3>
-                                <p className="text-slate-400 font-light text-sm">We believe in transparency and fairness in all our interactions, ensuring that users and businesses alike can trust the LocaGo platform.</p>
+                        <div className="p-4 sm:p-10 card-bg-item flex items-center justify-between flex-col min-h-full">
+                            <Image alt="" src="/img/program/MeetNFT.png" width={400} height={356} />
+                            <div className="card-item-left sm:mt-0 mt-5">
+                                <h3 className="text-white text-2xl mb-2">Meet Location – Meet Together</h3>
+                                <p className="text-slate-400 font-light text-sm">A physical location confirmed and certified through MeetGo's Meet Location in the digital space (Metaverse). Used for investors to receive bonus points for encouraging the MeetGo user community to visit store locations according to GPS, in order to improve business efficiency.</p>
                             </div>
                         </div>
                     </div>
@@ -265,7 +264,7 @@ export default function Landing() {
                                     <Card>
                                         <CardBody>
                                             <Image alt="" className="grow" src="/img/feature_1.png" width={1024} height={597} />
-                                            <h2 className="text-3xl sm:text-5xl mt-5 text-white mb-5 font-bold leading-normal">LocaMemory</h2>
+                                            <h2 className="text-3xl sm:text-4xl mt-5 text-white mb-5 font-bold leading-normal">LocaMemory</h2>
                                             <ul className="list-disc ps-5">
                                                 <li className="text-white">Total Supply: <b>21 Billion LCG</b></li>
                                                 <li className="text-white">Token Name: <b>LCG</b></li>
