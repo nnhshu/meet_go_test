@@ -22,7 +22,6 @@ function MapDetailPage({ locations, selectedLocation }) {
  
     const location_id = searchParams.get('id');
     const matchedItem = dataLocations.find(item => item.id === location_id);
-console.log(matchedItem)
     const [isAnimating, setIsAnimating] = useState(false);
     const [tapCount, setTapCount] = useState(0);
     const [pointDisplay, setPointDisplay] = useState(false);
