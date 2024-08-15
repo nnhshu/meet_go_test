@@ -206,10 +206,10 @@ function MapDetailPage({ locations, selectedLocation }) {
                             <Image src="/img/icons/icon_home.svg" width={32} height={32} alt=""/>
                         </div>
                         <div className="map-detail-info-right grow">
-                            <h3 className="text-white line-clamp">{matchedItem.address}</h3>
+                            <h3 className="text-white line-clamp">{matchedItem && matchedItem.address}</h3>
                             <div className="flex items-center gap-2">
                                 <FiMapPin size={24} className="text-danger" />
-                                <span className="text-violet-500 text-xs line-clamp-3">{matchedItem.address}</span>
+                                <span className="text-violet-500 text-xs line-clamp-3">{matchedItem && matchedItem.address}</span>
                             </div>
                         </div>
                     </div>
