@@ -17,7 +17,7 @@ import dataLocations from "../../data";
 
 function MapDetailPage({ locations, selectedLocation }) {
     const searchParams = useSearchParams()
- 
+    console.log(12312);
     const location_id = searchParams.get('id');
     const matchedItem = dataLocations.find(item => item.id === location_id);
     const [isAnimating, setIsAnimating] = useState(false);
