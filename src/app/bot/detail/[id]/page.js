@@ -173,16 +173,6 @@ function MapDetailPage({ locations, selectedLocation }) {
                             <div className="icon-fly">
                                 {showCoins && <CoinFlyAnimation />}
                             </div>
-                            <Sparkles
-                                color="white"
-                                count={6}
-                                minSize={7}
-                                maxSize={30}
-                                overflowPx={80}
-                                fadeOutSpeed={5}
-                                flicker={true}
-                                flickerSpeed={'slowest'}
-                            />
                         </div>
                     </div>
                     <div className="map-detail-bottom">
