@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
-                <script src="/lib/telegram-web-app.js" strategy="lazyOnload" />
+                <script src="/lib/telegram-web-app.js" strategy="lazyOnload" ></script>
                 <script src="/lib/tonweb-0.0.26.js" async="" strategy="lazyOnload"></script>
             </head>
             <body suppressHydrationWarning={true}>
