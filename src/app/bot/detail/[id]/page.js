@@ -228,8 +228,9 @@ function MapDetailPage({ locations, selectedLocation }) {
                                 style={{
                                     ...springs_coin,
                                 }}  
+                                className="absolute"
                                 >
-                                    <Image src="/img/icons/Coin_fly.png" width={375} height={310} alt="" className="absolute" />
+                                    <Image src="/img/icons/Coin_fly.png" width={375} height={310} alt=""  />
                             </animated.div>
                             <Image src="/img/icons/map_bottom.svg" width={120} height={35} alt="" className="map-icon-bottom absolute" />
                             
