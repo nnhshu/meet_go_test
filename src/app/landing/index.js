@@ -62,7 +62,7 @@ export default function Landing() {
                     </NavbarItem>
                 </NavbarContent>
                 <NavbarContent className="md:hidden" justify="end">
-                    <NavbarMenuToggle className="text-white" aria-label={isMenuOpen ? "Close menu" : "Open menu"} onChange={() => setIsMenuOpen(!isMenuOpen)} />
+                    <NavbarMenuToggle className="text-white" aria-labelledby={isMenuOpen ? "Close menu" : "Open menu"} onChange={() => setIsMenuOpen(!isMenuOpen)} />
                 </NavbarContent>
                 <NavbarMenu className="w-full">
                     {menuItems.map((item, index) => (
@@ -259,7 +259,7 @@ export default function Landing() {
                 <div className="container px-4 mx-auto mt-10">
                     <div className="columns-1">
                         <div className="features-container text-white sm:p-8 p-4">
-                            <Tabs aria-label="Options" isVertical={isVertical} className="flex-col bg-transparent">
+                            <Tabs aria-labelledby="Options" isVertical={isVertical} className="flex-col bg-transparent">
                                 <Tab key="LocaMemory" title="LocaMemory" className="text-white">
                                     <Card>
                                         <CardBody>

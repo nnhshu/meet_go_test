@@ -31,7 +31,7 @@ function MapDetailPage({ locations, selectedLocation }) {
     }))
 
     const [springs_coin, coin_animation] = useSpring(() => ({
-        from: { transform: 'scale(1)' },
+        from: { transform: 'scale()' },
     }))
 
     const [trigger, setTrigger] = useState(0);
@@ -228,9 +228,8 @@ function MapDetailPage({ locations, selectedLocation }) {
                                 style={{
                                     ...springs_coin,
                                 }}  
-                                className="absolute"
                                 >
-                                    <Image src="/img/icons/Coin_fly.png" width={375} height={310} alt="" />
+                                    <Image src="/img/icons/Coin_fly.png" width={375} height={310} alt="" className="absolute" />
                             </animated.div>
                             <Image src="/img/icons/map_bottom.svg" width={120} height={35} alt="" className="map-icon-bottom absolute" />
                             
