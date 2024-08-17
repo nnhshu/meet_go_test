@@ -20,11 +20,8 @@ import { GetNft } from "@/app/api";
 
 function MapDetailPage({ locations, selectedLocation }) {
 
-    // const { x } = useSpring({
-    //     from: { x: 0 },
-    //     x: state ? 1 : 0,
-    //     config: { duration: 1000 },
-    // });
+    const levels = [0, 10000, 20000, 30000, 40000, 50000];
+    const [level, setLevel] = useState(1);
 
     const [springs, api] = useSpring(() => ({
         from: { x: 0 },
@@ -101,8 +98,10 @@ function MapDetailPage({ locations, selectedLocation }) {
         };
     
         setPoints([...points, newPoint]);
+        
     
         setTotalPoints((prevTotal) => prevTotal + newPointValue);
+        localStorage.setItem('totalPoints', totalPoints);
         setShowCoins(true);
 
         setTimeout(() => {
@@ -154,6 +153,22 @@ function MapDetailPage({ locations, selectedLocation }) {
         };
     }, []);
 
+    useEffect(() => {
+        const storedPoints = localStorage.getItem('totalPoints');
+        if (storedPoints !== null) {
+            setTotalPoints(Number(storedPoints));
+        }
+    }, []);
+
+    useEffect(() => {
+        for (let i = levels.length - 1; i >= 0; i--) {
+            if (totalPoints >= levels[i]) {
+                setLevel(i + 1); 
+                break;
+            }
+        }
+    }, [totalPoints]);
+
     return (
         <>
             <TelegramProvider>
@@ -171,7 +186,7 @@ function MapDetailPage({ locations, selectedLocation }) {
                             </div>
                             <div className="bg-map-top p-2 text-center rounded-2xl">
                                 <p className="text-white text-xs min-h-8 block">Lên hạng <br /> cấp 2</p>
-                                <h2 className="text-gradient font-bold">1,000</h2>
+                                <h2 className="text-gradient font-bold">{levels[level]}</h2>
                             </div>
                         </div>
                     </div>
@@ -199,7 +214,7 @@ function MapDetailPage({ locations, selectedLocation }) {
                     <div className="map-detail-main text-center">
                         <div className="map-detail-level bg-gradient inline-flex items-center gap-2 mx-auto px-5 py-2 rounded-full">
                             <Image src="/img/icons/level.svg" width={24} height={24} alt="" />
-                            <span className="text-white">Cấp 1</span>
+                            <span className="text-white">Cấp {level}</span>
                         </div>
                         <div className="map-coin-wrap mt-4 relative" style={{backgroundImage: `url(/img/icons/Sky.png)`}}>
                             <div className="flex gap-2 align-items-center justify-center">
@@ -222,7 +237,6 @@ function MapDetailPage({ locations, selectedLocation }) {
                                     />
                                 </animated.div>
                                 {/* <Image src="/img/icons/Map/default.svg" width={200} height={170} alt=""  className={`map-icon-pen absolute ${isAnimating ? "animation-bounce" : ""}`}  onClick={handleIconClick} /> */}
-                                
                             </animated.div>
                             <animated.div 
                                 style={{
@@ -233,7 +247,6 @@ function MapDetailPage({ locations, selectedLocation }) {
                                     <Image src="/img/icons/Coin_fly.png" width={375} height={310} alt=""  />
                             </animated.div>
                             <Image src="/img/icons/map_bottom.svg" width={120} height={35} alt="" className="map-icon-bottom absolute" />
-                            
                             {points.map((point) => (
                                 <div
                                     key={point.id}
