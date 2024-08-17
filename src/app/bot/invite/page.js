@@ -4,14 +4,23 @@ import Image from "next/image";
 import '@/app/bot/bot.css';
 import BackButton from "@/app/components/back";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Input} from "@nextui-org/react";
-
+import { useToast } from 'rc-toastr';
 import { FiCopy } from "react-icons/fi";
 
 export default function InvitePage() {
 
+    const { toast } = useToast();
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
-   
+    const copyToClipBoard = async copyMe => {
+        try {
+            await navigator.clipboard.writeText(copyMe);
+            toast.success('Copy success!');
+        } catch (err) {
+            toast.success('Copy fail!');
+        }
+    };
+
     return (
         <React.Fragment>
             <div className="invite-wrap p-4 overflow-y-scroll	">
@@ -29,8 +38,8 @@ export default function InvitePage() {
                         </div>
                     </div>
                     <div className="invite-link flex items-center justify-between p-4 mt-4">
-                        <span className="text-white">https://t.me/locagoapp_bot/launch....</span>
-                        <FiCopy className="text-warning" />
+                        <span className="text-white">https://t.me/meetgoapp_bot/launch....</span>
+                        <FiCopy className="text-warning" onClick={() => copyToClipBoard('https://t.me/meetgoapp_bot/launch')} />
                     </div>
                     <Button color="primary" className="bg-gradient rounded-full mt-4 w-full">
                         Invite Friends

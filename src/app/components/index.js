@@ -39,8 +39,8 @@ const MyNavbar = () => {
             Invite
           </Link>
         </div>
-        <div className='navbar-item'>
-          <Link href="#" className='flex flex-col items-center justify-center gap-2 text-white text-sm'>
+        <div className={`navbar-item ${currentRoute === '/bot/profile' ? 'active' : ''}`}>
+          <Link href="/bot/profile" className='flex flex-col items-center justify-center gap-2 text-white text-sm'>
             <FiUser size={24} />
             Profile
           </Link>
